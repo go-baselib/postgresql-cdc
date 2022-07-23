@@ -15,7 +15,7 @@ tasks:
     - name: insert
       init: gp sync-await makeup
       command: |
-          echo "insert into sample.user(name) values('jesonouyang');" | docker-compose exec -T postgres psql -U postgres
+          sleep 120 && echo "insert into sample.user(name) values('jesonouyang');" | docker-compose exec -T postgres psql -U postgres
 
     - name: topic-list
       init: gp sync-await makeup
