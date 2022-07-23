@@ -1,0 +1,34 @@
+tasks:
+    - name: up
+      init: |
+          docker-compose pull
+      command: |
+          make up && gp sync-done makeup
+
+    - name: sample
+      init: gp sync-await makeup
+      command: |
+          make sample
+
+    - name: insert
+      init: gp sync-await makeup
+      command: |
+          echo "insert into sample.user(name) values('jesonouyang');" | docker-compose exec -T postgres psql -U postgres
+
+    - name: topic-list
+      init: gp sync-await makeup
+      command: |
+          docker-compose exec -T broker /bin/kafka-topics --bootstrap-server=localhost:9092 --list
+
+    - name: read
+      init: gp sync-await makeup
+      command: |
+          docker-compose exec -T broker /bin/kafka-console-consumer --bootstrap-server=localhost:9092 --topic sample --from-beginning
+
+ports:
+    - port: 2181 # zookeeper
+      onOpen: ignore
+    - port: 9092 # kafka
+      onOpen: ignore
+    - port: 5432 # postgreSQL
+      onOpen: ignore
