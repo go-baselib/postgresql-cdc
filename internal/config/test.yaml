@@ -1,0 +1,14 @@
+---
+source:
+    db_host: 127.0.0.1
+    db_port: 5432
+    db_user: test
+    db_pass: 123456
+    db_name: test_queue
+    slot: test_slot
+    lsn: test_lsn
+
+event_queen:
+    type: kafka
+    hosts: '127.0.0.1:9092'
+    name: test

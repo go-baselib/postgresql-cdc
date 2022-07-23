@@ -1,0 +1,15 @@
+---
+source:
+    db_host: 127.0.0.1
+    db_port: 5432
+    db_user: postgres
+    db_pass: postgres
+    db_name: postgres
+    table_names: sample.user
+    chunks: '1'
+    slot: sample
+
+event_queen:
+    type: kafka
+    hosts: '127.0.0.1:9092'
+    name: sample
