@@ -1,6 +1,6 @@
 tasks:
     - name: up
-      init: >
+      init: |
           docker-compose pull &&
           make up &&
           gp sync-done makeup
