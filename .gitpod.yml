@@ -1,9 +1,11 @@
 tasks:
     - name: up
-      init: |
-          docker-compose pull
+      init: >
+          docker-compose pull &&
+          make up &&
+          gp sync-done makeup
       command: |
-          make up && gp sync-done makeup
+          echo "make up done"
 
     - name: sample
       init: gp sync-await makeup
