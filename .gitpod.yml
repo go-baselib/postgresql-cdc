@@ -10,7 +10,7 @@ tasks:
     - name: sample
       init: gp sync-await makeup
       command: |
-          make sample
+          sleep 120 && make sample
 
     - name: insert
       init: gp sync-await makeup
@@ -20,12 +20,12 @@ tasks:
     - name: topic-list
       init: gp sync-await makeup
       command: |
-          docker-compose exec -T broker /bin/kafka-topics --bootstrap-server=localhost:9092 --list
+          sleep 120 docker-compose exec -T broker /bin/kafka-topics --bootstrap-server=localhost:9092 --list
 
     - name: read
       init: gp sync-await makeup
       command: |
-          docker-compose exec -T broker /bin/kafka-console-consumer --bootstrap-server=localhost:9092 --topic sample --from-beginning
+          sleep 120 docker-compose exec -T broker /bin/kafka-console-consumer --bootstrap-server=localhost:9092 --topic sample --from-beginning
 
 ports:
     - port: 2181 # zookeeper
