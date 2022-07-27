@@ -1,4 +1,4 @@
-module github.com/1005281342/postgresql-cdc
+module github.com/go-baselib/postgresql-cdc
 
 go 1.17
 

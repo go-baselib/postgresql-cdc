@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/1005281342/postgresql-cdc/internal/config"
-	"github.com/1005281342/postgresql-cdc/internal/publisher"
-	"github.com/1005281342/postgresql-cdc/model"
+	"github.com/go-baselib/postgresql-cdc/internal/config"
+	"github.com/go-baselib/postgresql-cdc/internal/publisher"
+	"github.com/go-baselib/postgresql-cdc/model"
 
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/ThreeDotsLabs/watermill/message"

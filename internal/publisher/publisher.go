@@ -3,7 +3,7 @@ package publisher
 import (
 	"strings"
 
-	"github.com/1005281342/postgresql-cdc/internal/config"
+	"github.com/go-baselib/postgresql-cdc/internal/config"
 
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/ThreeDotsLabs/watermill-kafka/v2/pkg/kafka"

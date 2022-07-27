@@ -3,8 +3,8 @@ package main
 import (
 	_ "embed"
 
-	"github.com/1005281342/postgresql-cdc/internal/config"
-	"github.com/1005281342/postgresql-cdc/internal/listener"
+	"github.com/go-baselib/postgresql-cdc/internal/config"
+	"github.com/go-baselib/postgresql-cdc/internal/listener"
 )
 
 //go:embed sample.yaml
