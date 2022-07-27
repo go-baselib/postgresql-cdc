@@ -170,6 +170,8 @@ func buildConnConfig() pgx.ConnConfig {
 	}
 }
 
-func Start() error {
+func Start(conf []byte) error {
+	config.InitConfig(conf)
+
 	return build().start()
 }
