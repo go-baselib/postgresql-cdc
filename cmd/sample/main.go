@@ -4,7 +4,7 @@ import (
 	_ "embed"
 
 	"github.com/go-baselib/postgresql-cdc/internal/config"
-	"github.com/go-baselib/postgresql-cdc/internal/listener"
+	"github.com/go-baselib/postgresql-cdc/listener"
 )
 
 //go:embed sample.yaml
